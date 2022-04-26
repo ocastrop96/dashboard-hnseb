@@ -9,8 +9,9 @@
     <title>HNSEB - Tablero de Gestión</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="public/views/plugins/fontawesome-free/css/all.min.css">
+    <!-- <link rel="stylesheet" href="public/views/plugins/fontawesome-free/css/all.min.css"> -->
     <link rel="stylesheet" href="public/views/resources/css/adminlte.min.css">
+    <script src="https://kit.fontawesome.com/a073170c04.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="hold-transition layout-top-nav layout-footer-fixed layout-navbar-fixed">
@@ -19,18 +20,20 @@
         include "pages/header.php";
         if (isset($_GET["ruta"])) {
             if (
-                $_GET["ruta"] == "home" ||
+                // $_GET["ruta"] == "home" ||
                 $_GET["ruta"] == "dash-emergencia" ||
                 $_GET["ruta"] == "dash-consulta-externa" ||
                 $_GET["ruta"] == "dash-hospitalizacion" ||
-                $_GET["ruta"] == "home"
+                $_GET["ruta"] == "dash-salaoperaciones" ||
+                $_GET["ruta"] == "dash-gestion" ||
+                $_GET["ruta"] == "direccion"
             ) {
                 include "pages/" . $_GET["ruta"] . ".php";
             } else {
                 include "pages/404.php";
             }
         } else {
-            include "pages/home.php";
+            include "pages/dash-consulta-externa.php";
         }
         include "pages/footer.php";
         ?>

@@ -35,6 +35,10 @@
                             <button type="submit" class="btn btn-info btn-block btn-flat rounded" id="btnLogin">Ingresar</button>
                         </div>
                     </div>
+                    <?php
+                    $login = new UsuariosControlador();
+                    $login->ctrLoginUsuario();
+                    ?>
                 </form>
             </div>
         </div>

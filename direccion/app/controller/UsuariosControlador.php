@@ -32,7 +32,7 @@ class UsuariosControlador
                                     timer: 1500
                                 });
                                 function redirect(){
-                                    window.location = "dashboard";
+                                    window.location = "dash-consulta-externa";
                                 }
                                 setTimeout(redirect,1200);
                                  </script>';
